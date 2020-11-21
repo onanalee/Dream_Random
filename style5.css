@@ -1,0 +1,82 @@
+#all {
+    text-align: center;
+}
+#submissionBox {
+    display: none;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+.randomDream{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+#editor {
+    text-align: center;
+    justify-content: center;
+    max-width: 70%;
+}
+html, body {
+    height: 100%;
+}
+p {
+    margin-bottom: 0;
+}
+img {
+    max-width: 800px;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+#colors{
+    width:40px;
+    height:40px;
+}
+#count{
+    text-align:left;
+}
+
+
+/*Moonrise kingdom*/
+body, .wrap {
+    background-color: #DAECED;
+    font-family: Futura;
+}
+h1 {
+    font-family: Futura;
+    color: #B62A3D;
+    font-size: 80px;
+    font-weight: bold;
+}
+#submissionButton, .submitButton {
+
+    background-color: #B5966D;
+    border: 2px solid #B5966D;
+    color: ghostwhite;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.input-group-text, .searchButton {
+    background-color: #EDCB64;
+}
+
+.displayButton {
+    background-color: #B5966D;
+    border: 2px solid #B5966D;
+    color: ghostwhite;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.searchBar, .form-control {
+    background-color: #fae091;
+}
+#searchResult {
+    background-color: #fae091;
+    border-radius: 10px;
+    max-width: 70%;
+}
+.changeTheme{
+    background-color: #a1c7c9;
+}

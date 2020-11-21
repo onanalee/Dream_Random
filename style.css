@@ -1,0 +1,79 @@
+#all {
+    text-align: center;
+}
+#submissionBox {
+    display: none;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+.randomDream{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+#editor {
+    text-align: center;
+    justify-content: center;
+    max-width: 70%;
+}
+html, body {
+    height: 100%;
+}
+p {
+    margin-bottom: 0;
+}
+img {
+    max-width: 800px;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+#colors{
+    width:40px;
+    height:40px;
+}
+#count{
+    text-align:left;
+}
+
+/*Hotel Chevalier*/
+body, .wrap {
+    background-color: #D3DDDC;
+    font-family: Futura;
+}
+h1 {
+    font-family: Futura;
+    color: #736856;
+    font-size: 80px;
+    font-weight: bold;
+}
+#submissionButton, .submitButton {
+
+    background-color: #456355;
+    border: 2px solid #456355;
+    color: ghostwhite;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.input-group-text, .searchButton {
+    background-color: #ffb300;
+}
+.displayButton {
+    background-color: #456355;
+    border: 2px solid #456355;
+    color: ghostwhite;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.searchBar, .form-control {
+    background-color: #FCD16B;
+}
+#searchResult {
+    background-color: #f1c8bb;
+    border-radius: 10px;
+    max-width: 70%;
+}
+.changeTheme{
+    background-color: #c9c4b9;
+}

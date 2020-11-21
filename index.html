@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>DRandom</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="/static/script.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" title="chevalierA" href="{{url_for('static', filename='style.css')}}">
+        <link rel="alternate stylesheet" type="text/css" title="tenenbaum"
+              href="{{url_for('static', filename='style2.css')}}">
+        <link rel="alternate stylesheet" type="text/css" title="lifeAquatic"
+              href="{{url_for('static', filename='style3.css')}}">
+        <link rel="alternate stylesheet" type="text/css" title="chevalierB"
+              href="{{url_for('static', filename='style4.css')}}">
+        <link rel="alternate stylesheet" type="text/css" title="moonriseA"
+              href="{{url_for('static', filename='style5.css')}}">
+        <link rel="alternate stylesheet" type="text/css" title="moonriseB"
+              href="{{url_for('static', filename='style6.css')}}">
+        <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
+
+        <meta property="og:title" content="Dream Random"/>
+        <meta property="og:description" content="Random dreams are random..."/>
+        <meta property="og:image" content="{{ url_for('static', filename='dream.jpg') }}"/>
+
+
+    </head>
+    <body onload="displayCount()">
+
+       <img id="colors" src="/static/colors.png">
+        <button type="button" onclick="switch_style('chevalierA');return false;" name="theme" value="Blue Theme"
+                class="changeTheme">
+            Chevalier A
+        </button>
+        <button type="button" onclick="switch_style('chevalierB');return false;" name="theme" value="Pink Theme"
+                class="changeTheme">
+            Chevalier B
+        </button>
+        <button type="button" onclick="switch_style('tenenbaum');return false;" name="theme" value="Pink Theme"
+                class="changeTheme">
+            RTenenbaum
+        </button>
+        <button type="button" onclick="switch_style('lifeAquatic');return false;" name="theme" value="Pink Theme"
+                class="changeTheme">
+            Life Aquatic
+        </button>
+
+        <button type="button" onclick="switch_style('moonriseA');return false;" name="theme" value="Pink Theme"
+                class="changeTheme">
+            Moonrise Kingdom A
+        </button>
+        <button type="button" onclick="switch_style('moonriseB');return false;" name="theme" value="Pink Theme"
+                class="changeTheme">
+            Moonrise Kingdom B
+        </button>
+
+
+        <div class="wrap">
+            <div id="all">
+                <h1>Dream Random</h1>
+                <div id="count"></div>
+
+                <button id="submissionButton" onclick="openClose()">Open Submit Box
+                </button>
+
+
+                <div id="submissionBox">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                    <span class="input-group-text">Title</span>
+                        </div>
+                        <input type="text" class="form-control" id="dreamTitle" placeholder="Enter title here">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Dream</span>
+                        </div>
+                        <textarea class="form-control" id="dreamContent"
+                                  cols="30"
+                                  rows="5" placeholder="Recall your dream here"></textarea>
+                    </div>
+                    <div class="review">
+                        <button onclick="submitDream()" type="button" class="submitButton">Submit Dream</button>
+                    </div>
+                </div>
+                <br>
+
+
+                <div>
+                    <input class="searchBar" id="search" type="text">
+                    <button  id="buttonSearch" class="searchButton" onclick="submitSearch()">Search</button>
+                </div>
+
+                <br>
+
+
+                <div>
+                    <button class="displayButton" onclick="displayRandomTrue()">Display Random Text-only Dream</button>
+                </div>
+                <br>
+
+                <div>
+                    <button class="displayButton" onclick="displayRandomFalse()">Display Random image/video Dream
+                    </button>
+                </div>
+                <br><br>
+
+
+                <div id="random_dream">
+                </div>
+
+
+                <div id="no_text_dream">
+                </div>
+
+                <div id="dream_image">
+                </div>
+
+                <div id="dream_video">
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+
+
+</html>
